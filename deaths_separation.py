@@ -15,7 +15,7 @@ from lib.plot_functions import (daily_deaths_global, multi_plot_with_format,
                                 multiplot_365)
 from lib.grouping_functions import daily_deaths
 from lib.constants import (DAYS_CUMULATIVES, YEARS_CENTER, START_DAY_AVG, 
-                           END_DAY_AVG, COL_MEANINGS)
+                           END_DAY_AVG, COL_MEANINGS, DAYS_OF_YEAR)
 
 hdf_dir = os.path.join('data', 'deaths_hdf')
 hdf_source_name = 'deaths_05_18_new_cols_checkpoint_1.h5'
@@ -230,10 +230,22 @@ def get_difference(deaths, divide_by, train_years, target_year, target_disease,
     
 
 # plot all years
+deviating_global = (
+    daily_deaths_global(deaths, 0, 
+                        DAYS_CUMULATIVES[2018] + DAYS_OF_YEAR[2018], 
+                        deviating_codes))
+specified_global = (
+    daily_deaths_global(deaths, 0,
+                        DAYS_CUMULATIVES[2018] + DAYS_OF_YEAR[2018],
+                        target_disease))
+multi_plot_with_format([deviating_global, specified_global], 
+                       'Respiratory deaths from 2005 to 2018', 
+                       'Day number', 'Accumulated daily deaths', 
+                       ['Unspecified', 'Specified'])
 
 get_difference(deaths,
-               'sexo', # ('ent_resid', 'sexo', 'new_age_group')
-               [2005, 2006, 2007, 2008], 2009,
-               ['J09', 'J10', 'J11', 'J13', 'J14'],
-               ['J12', 'J15', 'J16', 'J18'],
-               12, 80)
+                'sexo', # ('ent_resid', 'sexo', 'new_age_group')
+                [2005, 2006, 2007, 2008], 2009,
+                ['J09', 'J10', 'J11', 'J13', 'J14'],
+                ['J12', 'J15', 'J16', 'J18'],
+                12, 80)
