@@ -15,6 +15,12 @@ from tqdm import tqdm
 dbf_dir = 'dbf'
 csv_dir = 'csv'
 
+if not os.path.isdir(dbf_dir):
+    os.mkdir(dbf_dir)
+    
+if not os.path.isdir(csv_dir):
+    os.mkdir(csv_dir)
+
 dbf1 = 'https://www.inegi.org.mx/contenidos/programas/mortalidad/microdatos/defunciones/datos/defunciones_generales_base_datos_2005_2009_dbf.zip'
 dbf2 = 'https://www.inegi.org.mx/contenidos/programas/mortalidad/microdatos/defunciones/datos/defunciones_generales_base_datos_2010_2014_dbf.zip'
 
