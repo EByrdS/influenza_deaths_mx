@@ -1,10 +1,18 @@
-# influenza_deaths_mx
+# A Python project to create an accurate estimation of deaths by Influenza in Mexico in 2009.
+In 2009, **366** deaths were registered with a cause related to **Influenza virus**, but this work shows that a more realistic number is ***at least double*: 732**.
 
+### Official numbers:
+![Raw deaths of 2009](https://github.com/EByrdS/influenza_deaths_mx/blob/master/images/2009_official_numbers.jpg?raw=true)
+
+### The estimation of this project:
+![Our estimate of deaths for 2009](https://github.com/EByrdS/influenza_deaths_mx/blob/master/images/2009_our_estimate.jpg?raw=true)
+
+## Introduction
 In this repository, I present a method to estimate how many deaths of influenza were recorded as *atypical pneumonia*.
 The motivation is to create a clear method on how to do the same with regards to the COVID-19 pandemic
 of 2020.
 
-> This is the code of my final project in the course *Machine Learning*, from the *MSc in Computer Science* program, in *Tecnologico de Monterrey*, Mexico.
+> This is the code of my final project in the course *Machine Learning*, from the *MSc in Computer Science* program, in *Tecnologico de Monterrey*, Mexico. I would like to thank CONACYT for their support.
 
 ## Source of the problem
 Many people are dying from the disease of COVID-19, produced by the infection of the virus SARS-CoV-2,
