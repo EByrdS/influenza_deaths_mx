@@ -21,7 +21,14 @@ If you want, you can create these two files from scratch. First make sure that y
 downloaded the source databases from INEGI. To do that, go under the directory
 **Mortalidad-INEGI** and execute the file `download_data.py`.
 
-When you have the raw databases, execute first the file `data_to_hdf.py`. It will generate the
+Now, because the oldest databases are stored in **.dbf** format, you will need
+to install `simpledbf`:
+
+```bash
+$ pip install simpledbf
+```
+
+When you have the raw databases and `simpledbf`, execute first the file `data_to_hdf.py`. It will generate the
 `deaths_05_18_clean_checkpoint_1.h5`. And you should see in your console the following output:
 
 ```bash
