@@ -1,3 +1,5 @@
+DOI: [Exploitation of Deaths Registry in Mexico to Estimate the Total Deaths by Influenza Virus: A Preparation to Estimate the Advancement of COVID-19](https://link.springer.com/chapter/10.1007/978-3-030-60884-2_35)
+
 # A Python project to create an accurate estimation of deaths by Influenza in Mexico in 2009.
 In 2009, **366** deaths were registered with a cause related to **Influenza virus**, but this work shows that a more realistic number is ***at least double*: 732**.
 
